@@ -1,0 +1,19 @@
+{
+  "reproduction__seenGene_heldIndiv": {
+    "genes": 10610,
+    "individuals": 69
+  },
+  "CORE__heldGene_heldIndiv": {
+    "genes": 456,
+    "individuals": 69,
+    "homology_hard_genes": 156
+  },
+  "STRETCH__heldGene_heldIndiv_heldAncestry": {
+    "genes": 456,
+    "individuals": 89
+  },
+  "val__heldGene_heldIndiv": {
+    "genes": 1294,
+    "individuals": 71
+  }
+}

@@ -1,0 +1,16 @@
+# Genomics CLI toolchain (micromamba + bioconda).
+# Python DL/genomics stack is managed separately by uv (see requirements.txt).
+# Create with:
+#   micromamba create -y -n cisgram -f environment.yml
+name: cisgram
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - bcftools=1.21
+  - samtools=1.21
+  - htslib=1.21          # provides tabix + bgzip
+  - bedtools=2.31.1
+  - plink2=2.0.0a.6.9
+  - gcta=1.94.1
+  - ucsc-liftover=469

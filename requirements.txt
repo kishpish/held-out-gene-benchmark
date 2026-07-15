@@ -1,0 +1,25 @@
+# Python DL/genomics stack for the cis-regulatory grammar project.
+# Managed by uv in a project venv at project/.venv (separate from the JupyterLab venv).
+# Install with:
+#   uv venv --python 3.11 .venv
+#   uv pip install -r requirements.txt --torch-backend=cu124   # or matching CUDA
+#
+# torch is installed from the CUDA index; pin captured in uv.lock after first install.
+torch>=2.4
+enformer-pytorch>=0.8
+cyvcf2>=0.31
+pysam>=0.22
+pyfaidx>=0.8
+kipoiseq>=0.7
+numpy>=1.26,<2.2
+pandas>=2.2
+scipy>=1.13
+scikit-learn>=1.5
+statsmodels>=0.14
+matplotlib>=3.9
+seaborn>=0.13
+pyarrow>=17
+h5py>=3.11
+pyyaml>=6.0
+tqdm>=4.66
+ipykernel>=6.29

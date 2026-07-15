@@ -1,0 +1,35 @@
+# Data + genome-build configuration. Single source of truth for downstream notebooks.
+genome_build: GRCh38
+
+reference:
+  # Ensembl GRCh38 primary assembly (soft-masked ok; we uppercase on read).
+  # Verified/fetched during notebook 00.
+  source: ensembl
+  url: "http://ftp.ensembl.org/pub/release-110/fasta/homo_sapiens/dna/Homo_sapiens.GRCh38.dna.primary_assembly.fa.gz"
+  # chr naming: Ensembl uses '22' (no 'chr'); 1000G NYGC uses 'chr22'. Handle both.
+
+gencode:
+  release: 44
+  url: "http://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_44/gencode.v44.annotation.gtf.gz"
+
+kgp:  # 1000G high-coverage 30x, GRCh38, NYGC — streamed via tabix (no bulk download)
+  n_samples: 3202          # 2504 unrelated + 698 related
+  stream_only: true
+  ftp_base: "http://ftp.1000genomes.ebi.ac.uk/vol1/ftp/data_collections/1000G_2504_high_coverage/working/20220422_3202_phased_SNV_INDEL_SV"
+
+geuvadis:
+  accession: E-GEUV-1
+  populations: [CEU, FIN, GBR, TSI, YRI]
+
+mage:
+  n_samples: 731
+  populations: 26
+
+# Model window
+window:
+  backbone: enformer
+  length_bp: 196608
+  anchor: canonical_tss   # GENCODE MANE/canonical transcript TSS
+
+variants:
+  snv_only: true          # v1: indels excluded (kickoff hard rule 8)
