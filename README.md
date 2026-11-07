@@ -1,7 +1,7 @@
 # Transferable *cis*-Regulatory Grammar for Zero-Shot Personal Expression Prediction
 
-A rigorous, leakage-audited benchmark and mechanistic analysis of **cross-individual gene-expression
-prediction on held-out genes** — the open problem where sequence-to-expression deep models (Enformer,
+A  leakage-audited benchmark and mechanistic analysis of **cross-individual gene-expression
+prediction on held-out genes** ... the open problem where sequence-to-expression deep models (Enformer,
 Borzoi) fail. Built on fully open data (GEUVADIS + 1000 Genomes, GRCh38), end-to-end reproducible.
 
 > **TL;DR.** Per-gene linear models predict which *people* have higher expression of a gene from their
@@ -125,15 +125,7 @@ methodology, exact commands, result tables, caveats, and reproduction. Start wit
 - **GTEx** genotypes are dbGaP-controlled and are **not** used.
 - **GENCODE v44**, **Ensembl GRCh38**, **JASPAR** — open.
 
-## Scope & honesty
-
-The novel-method attempts here are **honest negatives** (no gene-agnostic model closed the zero-shot
-held-out-gene gap). The contribution is the **rigorous benchmark + mechanistic dissection**. Both mandated
-negative controls pass: the permutation control gives ρ≈0, and the *cis* signal is robust to ancestry
-correction (linear 0.229 vs Enformer 0.057 on the corrected target). Heavier levers (Enformer
-embedding-difference / confidence-weighted prior, end-to-end fine-tuning, MAGE cross-dataset) are documented
-as future work. Every number in this repo comes from actual computation.
-
+#
 ## License
 
 Code released under the **MIT License** (see `LICENSE`). Data are governed by their respective sources'
